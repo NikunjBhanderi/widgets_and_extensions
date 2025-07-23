@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 extension NunExtension on num {
   // Number To Indian Currency Format
   String toINCurrancy() {

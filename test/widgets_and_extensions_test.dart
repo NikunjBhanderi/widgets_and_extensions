@@ -21,4 +21,9 @@ void main() {
   test("Is Valid Email", () {
     expect("usergmail.com".isValidEmail(), "user@gmail.com");
   });
+
+  test("Number To Word Format", () {
+    expect(2500.toWord(), "બે હજાર પાંચ સો");
+    expect(1000.toWord(), "એક હજાર");
+  });
 }
