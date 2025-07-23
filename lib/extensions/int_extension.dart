@@ -24,7 +24,7 @@ extension IntExtension on int {
       'ચૌદ',
       'પંદર',
       'સોળ',
-      'સતરની',
+      'સત્તર',
       'અઢાર',
       'ઓગણીસ',
     ];
@@ -39,7 +39,7 @@ extension IntExtension on int {
       'સાઠ',
       'સિત્તેર',
       'એંસી',
-      'નેવુ',
+      'નેવું',
     ];
 
     String twoDigits(int n) {
@@ -53,6 +53,7 @@ extension IntExtension on int {
     }
 
     String result = '';
+
     if ((number ~/ 100000) > 0) {
       result += '${twoDigits(number ~/ 100000)} લાખ ';
       number %= 100000;
@@ -63,13 +64,8 @@ extension IntExtension on int {
       number %= 1000;
     }
 
-    if ((number ~/ 100) > 0) {
-      result += '${units[number ~/ 100]} સો ';
-      number %= 100;
-    }
-
     if (number > 0) {
-      result += twoDigits(number);
+      result += threeDigits(number);
     }
 
     return result.trim();
